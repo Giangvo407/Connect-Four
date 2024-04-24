@@ -1,0 +1,26 @@
+body {
+    text-align: center;
+    background-color: rgb(3, 245, 193);
+}
+
+.gameboard{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 600px;
+    height: 520px;
+    top: 9rem;
+    background: rgb(61, 6, 227);
+    border: 2px solid black;
+    padding: .5rem;
+    box-shadow: 5px 10px #888888;
+}
+
+.gameboard table tr td{
+    width: 90px;
+    height: 80px;
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+}
