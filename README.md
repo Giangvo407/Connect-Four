@@ -13,14 +13,16 @@ wire frames:
 <a href="https://ibb.co/gz2xqb5"><img src="https://i.ibb.co/yW9rvmw/Screenshot-2024-04-19-at-11-16-21-AM.png" alt="Screenshot-2024-04-19-at-11-16-21-AM" border="0"></a>
 <a href="https://ibb.co/m4WqKjQ"><img src="https://i.ibb.co/bX9BV0p/Screenshot-2024-04-19-at-10-30-40-AM.png" alt="Screenshot-2024-04-19-at-10-30-40-AM" border="0"></a>
 
-game link :  https://pages.git.generalassemb.ly/giangvo/Connect-Four/
+game link :  
+- https://pages.git.generalassemb.ly/giangvo/Connect-Four/
 
-requirements: https://generalassembly.instructure.com/courses/246/pages/project-1-requirements
+requirements: 
+- https://generalassembly.instructure.com/courses/246/pages/project-1-requirements
 
 
 Attributions (if applicable):   
-https://emojipedia.org/rocket
-https://emojipedia.org/flying-saucer
+- https://emojipedia.org/rocket 
+- https://emojipedia.org/flying-saucer
 
 
 Technologies Used:  
