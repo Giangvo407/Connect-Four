@@ -6,12 +6,12 @@ function $(cssSelector) {
 const instruction = $('#instruction')
 const closeInstruction = $('#close-instruction')
 const openInstruction = $('#open-instruction')
-const turnMessage = document.querySelector('#message')
-const boardRows = document.getElementsByTagName('tr');
-const boardCells = document.getElementsByTagName('td');
-const boardTiles = document.querySelectorAll('.tile')
+const turnMessageEl = document.querySelector('#message')
+const boardRowsEl = document.getElementsByTagName('tr');
+const boardCellsEl = document.getElementsByTagName('td');
+const boardTilesEl = document.querySelectorAll('.tile')
 const gameBoard = $('.gameboard')
-const resultScreen = $('.result-modal')
+const resultScreen = $('#result-modal')
 const resultMessage = $('#result-message')
 const resetButton = $('#reset')
 
@@ -20,7 +20,7 @@ let player1Color = 'red';
 let player1Icon = '🚀';
 const player2 = 'Alien';
 let player2Color = 'yellow';
-let player2Icon = '👾';
+let player2Icon = '🛸';
 let currentPlayer = 1;
 let winner;
 
@@ -34,47 +34,44 @@ closeInstruction.addEventListener('click', () => {
 })
 
 
-// for (i = 0; i < boardCells.length; i ++){
-//     boardCells[i].addEventListener('click', (e) =>{
-//         console.log(`${e.target.parentElement.rowIndex},${e.target.cellIndex}`)
-//     });
-// };
-
-
 function changeColor(e){
     let column = e.target.cellIndex;
     let row = [];
 
     for (i = 5; i > -1; i--){
-        if (boardRows[i].children[column].style.backgroundColor == 'white'){
-            if (boardRows[i].children[column].innerText == ''){
-            row.push(boardRows[i].children[column]);
+        if (boardRowsEl[i].children[column].style.backgroundColor == 'white'){
+            if (boardRowsEl[i].children[column].innerText == ''){
+            row.push(boardRowsEl[i].children[column]);
             if (currentPlayer === 1){
                 row[0].style.backgroundColor = `${player1Color}`;
                 row[0].innerText = player1Icon;
                 if (horizontalCheck() || verticalCheck() || diagonalCheck() || diagonalCheck2()){
-                    resultMessage.textContent = `${player1} win!`;
+                    turnMessageEl.textContent = `${player1} won`;
+                    resultMessage.textContent = `${player1} conquered space`;
                     resultScreen.style.display = 'flex';
-                    turnMessage.style.color = player1Color;
                     return;
                 }else if (drawCheck()){
-                    turnMessage.textContent = 'DRAW!';
+                    turnMessageEl.textContent = 'DRAW!';
+                    resultMessage.textContent= "Make love, not war!!";
+                    resultScreen.style.display = 'flex';
                     return;
                 }else{
-                    turnMessage.textContent = `${player2}'s turn`
+                    turnMessageEl.textContent = `${player2}'s turn`
                     return currentPlayer = 2;
                 }
             }else{
                 row[0].style.backgroundColor = `${player2Color}`;
                 row[0].innerText = player2Icon;
                 if (horizontalCheck() || verticalCheck() || diagonalCheck() || diagonalCheck2()){
+                    turnMessageEl.textContent = `${player2} won`;
                     resultScreen.style.display = 'flex'
-                    resultMessage.textContent= `${player2} win!`
-                    resultMessage.style.color = player2Color;
+                    resultMessage.textContent= `${player2} conquered space!`
                 }else if (drawCheck()){
-                    turnMessage.textContent = 'DRAW!';
+                    turnMessageEl.textContent = 'DRAW!';
+                    resultMessage.textContent= "Make love, not war!!";
+                    resultScreen.style.display = 'flex';
                 }else{
-                    turnMessage.textContent = `${player1}'s turn`;
+                    turnMessageEl.textContent = `${player1}'s turn`;
                     return currentPlayer = 1;
                 }
                 
@@ -84,7 +81,7 @@ function changeColor(e){
     }
 }
 
-Array.prototype.forEach.call(boardCells, (cell) => {
+Array.prototype.forEach.call(boardCellsEl, (cell) => {
     cell.addEventListener('click', changeColor);
     cell.style.backgroundColor = 'white';
 });
@@ -94,10 +91,10 @@ function colorMatchCheck(one, two, three, four){
 }
 
 function horizontalCheck(){
-    for (let row = 0; row < boardRows.length; row++){
+    for (let row = 0; row < boardRowsEl.length; row++){
         for (let col =0; col < 4; col++){
-           if (colorMatchCheck(boardRows[row].children[col].style.backgroundColor,boardRows[row].children[col+1].style.backgroundColor, 
-                                boardRows[row].children[col+2].style.backgroundColor, boardRows[row].children[col+3].style.backgroundColor)){
+           if (colorMatchCheck(boardRowsEl[row].children[col].style.backgroundColor,boardRowsEl[row].children[col+1].style.backgroundColor, 
+                                boardRowsEl[row].children[col+2].style.backgroundColor, boardRowsEl[row].children[col+3].style.backgroundColor)){
                return true;
            }
         }
@@ -107,8 +104,8 @@ function horizontalCheck(){
 function verticalCheck(){
     for (let col = 0; col < 7; col++){
         for (let row = 0; row < 3; row++){
-            if (colorMatchCheck(boardRows[row].children[col].style.backgroundColor, boardRows[row+1].children[col].style.backgroundColor,
-                                boardRows[row+2].children[col].style.backgroundColor,boardRows[row+3].children[col].style.backgroundColor)){
+            if (colorMatchCheck(boardRowsEl[row].children[col].style.backgroundColor, boardRowsEl[row+1].children[col].style.backgroundColor,
+                                boardRowsEl[row+2].children[col].style.backgroundColor,boardRowsEl[row+3].children[col].style.backgroundColor)){
                 return true;
             };
         }   
@@ -118,8 +115,8 @@ function verticalCheck(){
 function diagonalCheck(){
     for(let col = 0; col < 4; col++){
         for (let row = 0; row < 3; row++){
-            if (colorMatchCheck(boardRows[row].children[col].style.backgroundColor, boardRows[row+1].children[col+1].style.backgroundColor,
-                boardRows[row+2].children[col+2].style.backgroundColor,boardRows[row+3].children[col+3].style.backgroundColor)){
+            if (colorMatchCheck(boardRowsEl[row].children[col].style.backgroundColor, boardRowsEl[row+1].children[col+1].style.backgroundColor,
+                boardRowsEl[row+2].children[col+2].style.backgroundColor,boardRowsEl[row+3].children[col+3].style.backgroundColor)){
                     return true;
                 }
             }
@@ -130,8 +127,8 @@ function diagonalCheck(){
 function diagonalCheck2(){
     for(let col = 0; col < 4; col++){
         for (let row = 5; row > 2; row--){
-            if (colorMatchCheck(boardRows[row].children[col].style.backgroundColor, boardRows[row-1].children[col+1].style.backgroundColor,
-                boardRows[row-2].children[col+2].style.backgroundColor,boardRows[row-3].children[col+3].style.backgroundColor)){
+            if (colorMatchCheck(boardRowsEl[row].children[col].style.backgroundColor, boardRowsEl[row-1].children[col+1].style.backgroundColor,
+                boardRowsEl[row-2].children[col+2].style.backgroundColor,boardRowsEl[row-3].children[col+3].style.backgroundColor)){
                     return true;
             }
         }
@@ -140,22 +137,22 @@ function diagonalCheck2(){
 
 function drawCheck(){
     let fullSlot = []
-    for (i=0; i < boardCells.length; i++){
-        if (boardCells[i].style.backgroundColor !== 'white'){
-            fullSlot.push(boardCells[i]);
+    for (i=0; i < boardCellsEl.length; i++){
+        if (boardCellsEl[i].style.backgroundColor !== 'white'){
+            fullSlot.push(boardCellsEl[i]);
         }
     }
-    if (fullSlot.length === boardCells.length){
+    if (fullSlot.length === boardCellsEl.length){
         return true;
     }
 }
 
 resetButton.addEventListener('click', () => {
-    boardTiles.forEach(tile => {
+    boardTilesEl.forEach(tile => {
         tile.style.backgroundColor = 'white';
         tile.innerText = '';
     });
-    turnMessage.style.color = 'black';
+    turnMessageEl.style.color = 'black';
     resultScreen.style.display = 'none';
-    return (currentPlayer === 1 ? turnMessage.textContent = `${player1}'s turn` : turnMessage.textContent = `${player2}'s turn`);
+    return (currentPlayer === 1 ? turnMessageEl.textContent = `${player1}'s turn` : turnMessageEl.textContent = `${player2}'s turn`);
 });
