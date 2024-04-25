@@ -18,11 +18,11 @@ const resetButton = $('#reset')
 let player1 ='Human';
 let player1Color = 'red';
 let player1Icon = '🚀';
-const player2 = 'Alien';
+let player2 = 'Alien';
 let player2Color = 'yellow';
 let player2Icon = '🛸';
 let currentPlayer = 1;
-let winner;
+
 
 openInstruction.addEventListener('click', () => {
     instruction.style.display = 'flex';
@@ -152,7 +152,6 @@ resetButton.addEventListener('click', () => {
         tile.style.backgroundColor = 'white';
         tile.innerText = '';
     });
-    turnMessageEl.style.color = 'black';
     resultScreen.style.display = 'none';
     return (currentPlayer === 1 ? turnMessageEl.textContent = `${player1}'s turn` : turnMessageEl.textContent = `${player2}'s turn`);
 });
