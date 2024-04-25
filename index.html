@@ -8,9 +8,21 @@
   <title>Connect Four</title>
 </head>
 <body>
-  <h1>Connect Four</h1>
-  <h2 id="message">Message</h2>
-  <div class="gameboard">
+  <div id="instruction">
+    <div class="instruction-content">
+        <h1>Welcome to Connect Four 😀</h1>
+        <h2>
+            instructions blahblabhalbhalbhalbhalbhalvhalv
+        </h2>
+        <h3>Remember:</h3>
+        <button id="close-instruction">Play</button>
+    </div>
+</div>
+  
+<div>
+  <h3>Connect Four</h3>
+  <h4 id="message">Message</h4>
+  <section class="gameboard">
     <table>
       <tr>
         <td class="tile"></td>
@@ -73,7 +85,14 @@
       </tr>
     </table>
   </div>
-  </section>
-  <button id="reset">Play Again</button>
+  
+  <div class= 'result-modal'>
+        <div id="result-message"></div>
+        <button id="reset">PLAY AGAIN?</button>
+    </div>
+
+    <footer>
+      <button id="open-instruction">RULES</button>
+  </footer>
 </body>
 </html>
