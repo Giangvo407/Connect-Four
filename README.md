@@ -1,6 +1,8 @@
 Screenshot: 
 
-<a href="https://ibb.co/d64z8fZ"><img src="https://i.ibb.co/K7x3T5n/Screenshot-2024-04-25-at-10-46-24-AM.png" alt="Screenshot-2024-04-25-at-10-46-24-AM" border="0"></a><a href="https://ibb.co/qmW27g0"><img src="https://i.ibb.co/0YFzm9B/Screenshot-2024-04-25-at-10-47-54-AM.png" alt="Screenshot-2024-04-25-at-10-47-54-AM" border="0"></a>
+<a href="https://ibb.co/d64z8fZ"><img src="https://i.ibb.co/K7x3T5n/Screenshot-2024-04-25-at-10-46-24-AM.png" alt="Screenshot-2024-04-25-at-10-46-24-AM" border="0"></a>
+
+<a href="https://ibb.co/qmW27g0"><img src="https://i.ibb.co/0YFzm9B/Screenshot-2024-04-25-at-10-47-54-AM.png" alt="Screenshot-2024-04-25-at-10-47-54-AM" border="0"></a>
 
 
 
@@ -10,7 +12,9 @@ Humans Vs Aliens:
 Getting Started: 
 
 wire frames: 
+
 <a href="https://ibb.co/gz2xqb5"><img src="https://i.ibb.co/yW9rvmw/Screenshot-2024-04-19-at-11-16-21-AM.png" alt="Screenshot-2024-04-19-at-11-16-21-AM" border="0"></a>
+
 <a href="https://ibb.co/m4WqKjQ"><img src="https://i.ibb.co/bX9BV0p/Screenshot-2024-04-19-at-10-30-40-AM.png" alt="Screenshot-2024-04-19-at-10-30-40-AM" border="0"></a>
 
 game link :  
