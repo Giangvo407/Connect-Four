@@ -1,8 +1,27 @@
 Screenshot: 
+
 <a href="https://ibb.co/d64z8fZ"><img src="https://i.ibb.co/K7x3T5n/Screenshot-2024-04-25-at-10-46-24-AM.png" alt="Screenshot-2024-04-25-at-10-46-24-AM" border="0"></a>
 
-Your game’s title: Include a description of your game and what it does. Background info about the game and why you chose it is a nice touch.
-Getting Started: Include a link to your deployed game and any instructions you deem important. This should also contain a link to your planning materials.
-Attributions (if applicable): Include links to any external resources (such as libraries or assets) you used to develop your application.
-Technologies Used: List of the technologies used, for example: JavaScript, HTML, CSS, etc.
-Next Steps: Planned future enhancements (stretch goals/icebox items).
+
+<a href="https://ibb.co/d64z8fZ"><img src="https://i.ibb.co/K7x3T5n/Screenshot-2024-04-25-at-10-46-24-AM.png" alt="Screenshot-2024-04-25-at-10-46-24-AM" border="0"></a><a href="https://ibb.co/qmW27g0"><img src="https://i.ibb.co/0YFzm9B/Screenshot-2024-04-25-at-10-47-54-AM.png" alt="Screenshot-2024-04-25-at-10-47-54-AM" border="0"></a>
+
+
+
+Humans Vs Aliens:
+    It's the year 3024, humanity has depleted  all of Earth's resources. Humanity have to venture out into the space in search of resources, but instead, they encounter another intelligent lifeform (Aliens). In this game, you must connect four of your spaceships to conquer outta space.
+ 
+Getting Started: 
+game link :  https://pages.git.generalassemb.ly/giangvo/Connect-Four/
+requirements: https://generalassembly.instructure.com/courses/246/pages/project-1-requirements
+
+
+Attributions (if applicable):   https://emojipedia.org/rocket
+https://emojipedia.org/flying-saucer
+
+
+Technologies Used:  JavaScript, HTML, CSS and VScode.
+
+Next Steps: 
+- add wins/lose/tie tally
+- rotating animations at the result screen for the winning icon
+- Ai for second player
