@@ -14,6 +14,7 @@ body {
     text-align: center;
     position: relative;
     background-image: url("https://thehill.com/wp-content/uploads/sites/2/2022/08/CA_space_08032022istock.jpg");
+    background-size: cover;
 
     h2, 
     h3 {
@@ -30,6 +31,7 @@ body {
     width: 100%;
     height: 100%;
     background-image: url("https://thehill.com/wp-content/uploads/sites/2/2022/08/CA_space_08032022istock.jpg");
+    background-size: cover;
 }
 
 .instruction-content {
